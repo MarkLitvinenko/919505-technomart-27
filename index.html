@@ -264,28 +264,26 @@
         <button type="button">Заблудились? Напишите нам!</button>
       </section>
 
-      <section class="visually-hidden">
+      <section class="hidden">
         <h2>Написать письмо</h2>
 
-        <button type="button">
-          <img src="img/icon-close.svg" width="21" height="21" alt="Закрыть">
-        </button>
+        <button type="button" aria-label="Закрыть"></button>
 
         <form method="post" action="https://echo.htmlacademy.ru">
-          <div>
-            <label for="name">Ваше имя</label>
-            <input id="name" type="text" name="name" placeholder="Имя Фамилия">
-          </div>
+          <label>
+            <input type="text" name="name" placeholder="Имя Фамилия">
+            Ваше имя
+          </label>
 
-          <div>
-            <label for="email">Ваш e-mail</label>
-            <input id="email" type="email" name="email" placeholder="email@example.com">
-          </div>
+          <label>
+            <input type="email" name="email" placeholder="email@example.com">
+            Ваш e-mail
+          </label>
 
-          <div>
-            <label for="message-text">Текст письма</label>
-            <textarea id="message-text" name="message" rows="5" placeholder="В свободной форме"></textarea>
-          </div>
+          <label>
+            <textarea name="message" rows="5" placeholder="В свободной форме"></textarea>
+            Текст письма
+          </label>
 
           <div>
             <button type="submit">Отправить</button>

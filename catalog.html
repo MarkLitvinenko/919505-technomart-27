@@ -61,6 +61,19 @@
           <fieldset>
             <legend>Цена:</legend>
             <!--Здесь будет доделан двойной ползунок с ценами-->
+            <div>
+              <label>
+                <input type="number" value="0" name="min" min="0" max="35000" step="100">
+                Минимальная цена
+              </label>
+
+              <p>—</p>
+
+              <label>
+                <input type="number" value="0" name="max" min="0" max="35000" step="100">
+                Максимальная цена
+              </label>
+            </div>
           </fieldset>
 
           <fieldset>
@@ -68,35 +81,35 @@
             <ul>
               <li>
                 <label>
-                  <input type="checkbox" name="Bosch">
+                  <input type="checkbox" value="Bosch" name="companies-list">
                   Bosch
                 </label>
               </li>
 
               <li>
                 <label>
-                  <input type="checkbox" name="Interskol">
+                  <input type="checkbox" value="Interskol" name="companies-list">
                   Интерскол
                 </label>
               </li>
 
               <li>
                 <label>
-                  <input type="checkbox" name="Makita">
+                  <input type="checkbox" value="Makita" name="companies-list">
                   Makita
                 </label>
               </li>
 
               <li>
                 <label>
-                  <input type="checkbox" name="Dewalt">
+                  <input type="checkbox" value="Dewalt" name="companies-list">
                   Dewalt
                 </label>
               </li>
 
               <li>
                 <label>
-                  <input type="checkbox" name="Hitachi">
+                  <input type="checkbox" value="Hitachi" name="companies-list">
                   Hitachi
                 </label>
               </li>
@@ -232,16 +245,11 @@
         </p>
       </section>
 
-      <section class="visually-hidden">
-        <h2>Оповещение о добавлении товара в корзину</h2>
-        <button type="button">
-          <img src="img/icon-close.svg" width="21" height="21" alt="Закрыть">
-        </button>
+      <section class="hidden">
+        <h2 class="visually-hidden">Оповещение о добавлении товара в корзину</h2>
+        <button type="button" aria-label="Закрыть"></button>
 
-        <div>
-          <img src="img/icon-mark.svg" width="66" height="66" alt="">
-          <p>Товар добавлен в корзину!<p>
-        </div>
+        <p>Товар добавлен в корзину!<p>
 
         <div>
           <a href="#nowhere">Оформить заказ</a>
