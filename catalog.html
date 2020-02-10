@@ -55,25 +55,25 @@
         <h2>Перфораторы</h2>
 
         <form method="get" action="https://echo.htmlacademy.ru">
-          <h3>Форма фильтрации товаров</h3>
+          <h3 class="visually-hidden">Форма фильтрации товаров</h3>
           <p>Фильтр</p>
 
           <fieldset>
             <legend>Цена:</legend>
             <!--Здесь будет доделан двойной ползунок с ценами-->
-            <div>
+            <p>
               <label>
                 <input type="number" value="0" name="min" min="0" max="35000" step="100">
                 Минимальная цена
               </label>
 
-              <p>—</p>
+              <span>—</span>
 
               <label>
                 <input type="number" value="0" name="max" min="0" max="35000" step="100">
                 Максимальная цена
               </label>
-            </div>
+            </p>
           </fieldset>
 
           <fieldset>
@@ -245,17 +245,15 @@
         </p>
       </section>
 
-      <section class="hidden">
-        <h2 class="visually-hidden">Оповещение о добавлении товара в корзину</h2>
+      <div class="hidden">
         <button type="button" aria-label="Закрыть"></button>
-
         <p>Товар добавлен в корзину!<p>
 
         <div>
           <a href="#nowhere">Оформить заказ</a>
           <a href="#nowhere">Продолжить покупки</a>
         </div>
-      </section>
+      </div>
     </main>
 
     <footer>
