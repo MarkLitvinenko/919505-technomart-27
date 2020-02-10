@@ -54,8 +54,89 @@
       <section>
         <h2>Перфораторы</h2>
 
-        <h3>Форма фильтрации товаров</h3>
-        <!--Здесь будет форма-->
+        <form method="get" action="https://echo.htmlacademy.ru">
+          <h3 class="visually-hidden">Форма фильтрации товаров</h3>
+          <p>Фильтр</p>
+
+          <fieldset>
+            <legend>Цена:</legend>
+            <!--Здесь будет доделан двойной ползунок с ценами-->
+            <p>
+              <label>
+                <input type="number" value="0" name="min" min="0" max="35000" step="100">
+                <span class="visually-hidden">Минимальная цена</span>
+              </label>
+
+              <span>—</span>
+
+              <label>
+                <input type="number" value="0" name="max" min="0" max="35000" step="100">
+                <span class="visually-hidden">Максимальная цена</span>
+              </label>
+            </p>
+          </fieldset>
+
+          <fieldset>
+            <legend>Производители:</legend>
+            <ul>
+              <li>
+                <label>
+                  <input type="checkbox" value="Bosch" name="companies-list">
+                  Bosch
+                </label>
+              </li>
+
+              <li>
+                <label>
+                  <input type="checkbox" value="Interskol" name="companies-list">
+                  Интерскол
+                </label>
+              </li>
+
+              <li>
+                <label>
+                  <input type="checkbox" value="Makita" name="companies-list">
+                  Makita
+                </label>
+              </li>
+
+              <li>
+                <label>
+                  <input type="checkbox" value="Dewalt" name="companies-list">
+                  Dewalt
+                </label>
+              </li>
+
+              <li>
+                <label>
+                  <input type="checkbox" value="Hitachi" name="companies-list">
+                  Hitachi
+                </label>
+              </li>
+            </ul>
+          </fieldset>
+
+          <fieldset>
+            <legend>Питание:</legend>
+            <ul>
+              <li>
+                <label>
+                  <input type="radio" name="power-supply" value="Аккумуляторные">
+                  Аккумуляторные
+                </label>
+              </li>
+
+              <li>
+                <label>
+                  <input type="radio" name="power-supply" value="Сетевые">
+                  Сетевые
+                </label>
+              </li>
+            </ul>
+          </fieldset>
+
+          <button type="submit">Показать</button>
+        </form>
 
         <div>
           <h3>Сортировка:</h3>
@@ -163,6 +244,16 @@
           В ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут совмещены отбойный молоток и ударная дрель.
         </p>
       </section>
+
+      <div class="hidden">
+        <button type="button" aria-label="Закрыть"></button>
+        <p>Товар добавлен в корзину!<p>
+
+        <div>
+          <a href="#nowhere">Оформить заказ</a>
+          <a href="#nowhere">Продолжить покупки</a>
+        </div>
+      </div>
     </main>
 
     <footer>
