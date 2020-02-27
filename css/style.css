@@ -6,7 +6,6 @@ body {
 
 a {
   color: inherit;
-  outline: none;
 }
 
 .button {
@@ -14,25 +13,36 @@ a {
   font-size: 14px;
   line-height: 18px;
 
+  text-align: center;
   text-transform: uppercase;
   text-decoration: none;
 
   border: none;
-  outline: none;
 
   background-color: #ee3643;
   color: #ffffff;
 }
 
+.button:hover {
+  background-color: #212a3a;
+}
+
 .header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   background-color: #f3f7f9;
+
+  width:100%;
 }
 
 .header-menu {
-  height: 42px;
-
   display:flex;
   justify-content: center;
+
+  width:100%;
+
+  margin-bottom: 46px;
 
   font-size: 17px;
   line-height: 18px;
@@ -42,20 +52,26 @@ a {
 }
 
 .header-menu a {
-  display:flex;
-  justify-content:center;
-  align-items:center;
+  display: block;
+  line-height: 42px;
+  width: 150px;
+  text-align: center;
+  text-decoration: none;
+
+  margin:0;
+  padding: 0;
 }
 
 .header-logo {
   margin: 0;
+
+  width: 220px;
 }
 
 .header-logo a {
   background-color: #ee3643;
   box-shadow: 0 5px 0 0 #b52933;
-
-  padding: 12px 56px;
+  width: 220px;
 }
 
 .header-logo a:hover,
@@ -70,13 +86,15 @@ a {
 }
 
 .search {
+  display: block;
   font-family: 'Cuprum', sans-serif;
   font-size: 17px;
-  line-height: 18px;
+
+  width: 270px;
+  height: 42px;
 
   background-color: transparent;
   border: none;
-  outline: none;
 }
 
 .search::placeholder {
@@ -96,33 +114,35 @@ a {
   color: #000000;
 }
 
-.bookmarks,
-.header-cart {
+.header-menu-button {
+  font-size: 17px;
+
   text-decoration: none;
-  color: #ffffff;
+  text-transform: none;
+
+  background-color: #293449;
+}
+
+.header-menu-button:hover,
+.header-menu-button:focus {
+  background-color: #212a3a;
+}
+
+.header-menu-button:active {
+  color: #b3b4b6;
+  background-color: #161d29;
 }
 
 .header-cart-not-empty {
   background-color: #ee3643;
 }
 
-.bookmarks:hover,
-.header-cart:hover,
-.bookmarks:focus,
-.header-cart:focus {
-  background-color: #212a3a;
-}
-
-.bookmarks:active,
-.header-cart:active {
-  color: #b3b4b6;
-  background-color: #161d29;
-}
-
 .order-button {
   font-size: 18px;
   text-transform: none;
   background-color: #63a63e;
+
+  width: 150px;
 }
 
 .order-button:hover,
@@ -135,15 +155,34 @@ a {
   background-color: #518534;
 }
 
+.header-middle {
+  display: flex;
+  justify-content: space-between;
+
+  width: 940px;
+  height: 70px;
+
+  margin-bottom: 40px;
+}
+
 .introduction {
   font-size: 16px;
   line-height: 23px;
   font-style: italic;
 
+  margin:0;
+  padding-left: 40px;
+
+  width: 300px;
+
   color: #ee3643;
 }
 
-.phone-number {
+.contacts {
+  width: 340px;
+}
+
+.header-phone-number {
   font-size: 21px;
   line-height: 21px;
   text-decoration: none;
@@ -160,29 +199,85 @@ a {
   color: #32425c;
 }
 
+.user-account-buttons {
+  display: flex;
+  justify-content: space-between;
+
+  padding:0;
+  margin:0;
+
+  width: 281px;
+  height: 45px;
+}
+
+.user-account-buttons li {
+  list-style: none;
+}
+
 .user-account-button {
-  font-size: 21px;
-  line-height: 21px;
+  display: block;
+
+  text-align: center;
   text-transform: none;
+  text-decoration: none;
+
+  font-size: 21px;
+  line-height: 45px;
 
   color: #000000;
   background-color: #ffffff;
 }
 
-.user-account-buttons:hover,
-.user-account-buttons:focus {
+.enter-button {
+  position: relative;
+
+  padding-left: 28px;
+
+  width: 93px;
+  height: 45px;
+
+  background-image: url("../img/icon-login.svg");
+  background-repeat: no-repeat;
+  background-position: 15px center;
+}
+
+.registration-button {
+  width: 150px;
+  height: 45px;
+}
+
+.account-settings-button {
+  padding-left: 30px;
+  min-width: 220px;
+
+  background-image: url("../img/icon-user.svg");
+  background-repeat: no-repeat;
+  background-position: 15px center;
+}
+
+.logout-button {
+  width: 60px;
+
+  background-image: url("../img/icon-logout.svg");
+  background-repeat: no-repeat;
+  background-position: 30px center;
+}
+
+.user-account-buttons a:hover,
+.user-account-buttons a:focus {
   color: #ee3643;
 }
 
-.user-account-buttons:active {
+.enter-button:hover .enter-button::before {
+  fill: #32425c;
+}
+
+.user-account-buttons a:active {
   color: #cacaca;
 }
 
 .user-upper-panel {
-  font-size: 21px;
-  line-height: 21px;
-
-  background-color: #ffffff;
+  display: flex;
 }
 
 .user-upper-panel a {
@@ -190,12 +285,12 @@ a {
   color: #000000;
 }
 
-.user-upper-panel:hover,
-.user-upper-panel:focus {
+.user-upper-panel a:hover,
+.user-upper-panel a:focus {
   color: #32425c;
 }
 
-.user-upper-panel:active {
+.user-upper-panel a:active {
   color: #c5c5c5;
 }
 
@@ -216,6 +311,12 @@ a {
   color: #c5c5c5;
 }
 
+.header-site-navigation {
+  display: flex;
+
+  margin-bottom: 60px;
+}
+
 .header-site-navigation ul {
   list-style: none;
 
@@ -228,25 +329,36 @@ a {
   box-shadow: inset 0 -5px 0 0 #293449;
 }
 
-.site-sections {
+.site-pages {
   display: flex;
-  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+
+  padding: 0;
+  margin: 0;
+
+  width: 940px;
 }
 
-.site-sections a {
+.site-pages a {
+  display: block;
+  line-height: 60px;
+  width: 134px;
+  text-align: center;
   text-decoration: none;
+  margin:0;
 }
 
-.site-sections a:hover,
-.site-sections a:focus {
+.site-pages a:hover,
+.site-pages a:focus {
   background-color: #293449;
 }
 
-.site-sections a:active {
+.site-pages a:active {
   background-color: #1d2739;
 }
 
-.site-sections a {
+.site-pages a {
   color: #ffffff;
 }
 
@@ -274,12 +386,12 @@ a {
   font-family: 'PT Sans', 'Arial', sans-serif;
 }
 
-.new-product {
+.new {
   position: relative;
   overflow: hidden;
 }
 
-.new-product::after {
+.new::after {
   content: "new";
   position: absolute;
   top: 0;
@@ -333,7 +445,6 @@ a {
   background-color: #ffffff;
 
   border: 3px solid #63a63e;
-  outline: none;
 }
 
 .bookmark-button:hover,
@@ -384,12 +495,12 @@ a {
   list-style: none;
 }
 
-.product {
-  position: relative;
-}
-
 .order-panel {
+  visibility: hidden;
+
+  display: flex;
   position: absolute;
+
   top: 0;
   left: 0;
 }
@@ -397,6 +508,9 @@ a {
 .product {
   display: flex;
   flex-direction: column;
+  position: relative;
+
+  width: 220px;
 
   margin-top: 20px;
   margin-right: 20px;
@@ -408,29 +522,28 @@ a {
   box-shadow: 0 10px 25px -15px #000000;
 }
 
+.product:focus {
+  box-shadow: 0 10px 25px -15px #000000;
+}
+
 .product:hover .order-panel {
-  display: flex;
+  visibility: visible;
 }
 
 .product:hover .product-img {
-  display: none;
+  visibility: hidden;
 }
 
-.order-panel {
-  display: none;
-  position: absolute;
-  top: 0;
-  left: 0;
+.product img {
+  order: -1;
 }
 
-.product-list h3 {
+.product h3 {
   font-weight: bold;
   font-size: 18px;
   line-height: 20px;
 
   color: #000000;
-
-  order: 1;
 }
 
 .product-list del {
@@ -439,23 +552,17 @@ a {
   line-height: 18px;
 
   color: #999999;
-  order: 2;
 }
 
 .product-price {
-  display: flex;
-
-  order: 3;
-}
-
-.product-price span {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  position: relative;
+  text-align: center;
 
   font-size: 17px;
-  line-height: 18px;
   font-weight: bold;
+  line-height: 38px;
+
+  width: 160px;
 
   color: #ffffff;
   background-color: #ee3643;
@@ -465,6 +572,10 @@ a {
   content: "";
   font-size: 0;
 
+  position: absolute;
+  right: 0;
+
+  background-color: #ffffff;
   border: 19px solid transparent;
   border-left-color: #ee3643;
 }
@@ -527,6 +638,10 @@ a {
   color: #f3f7f9;
 }
 
+.footer-phone-number {
+  text-decoration: none;
+}
+
 .footer-site-navigation ul {
   list-style: none;
   font-size: 18px;
@@ -551,21 +666,21 @@ a {
   color: #707a8a;
 }
 
-.catalog-sections li {
+.catalog-pages li {
   display: inline-block;
 }
 
-.catalog-sections a {
+.catalog-pages a {
   text-decoration: none;
   color: #ffd180;
 }
 
-.catalog-sections a:hover,
-.catalog-sections a:focus {
+.catalog-pages a:hover,
+.catalog-pages a:focus {
   text-decoration: underline;
 }
 
-.catalog-sections a:active {
+.catalog-pages a:active {
   color: #a6906e;
 }
 
@@ -631,11 +746,6 @@ a {
   line-height: 18px;
 
   color: #ffffff;
-}
-
-.developer-info a {
-  text-decoration: none;
-  color: #ffd180;
 }
 
 .developer-info a {
