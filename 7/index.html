@@ -3,8 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Техномарт</title>
-    <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700&display=swap&subset=cyrillic" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&display=swap&subset=cyrillic" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Cuprum:400,700,700i%7CPT+Sans:400,700&display=swap&subset=cyrillic" rel="stylesheet">
     <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
     <base href="https://htmlacademy-htmlcss.github.io/919505-technomart-27/7/">
@@ -19,28 +18,38 @@
           </a>
         </p>
 
-        <input id="search" class="search" type="search" name="search" placeholder="Поиск">
-        <label class="visually-hidden" for="search"></label>
-        <span class="bookmarks">Закладки</span>
-        <span class="cart">Корзина</span>
+        <form method="get" action="https://echo.htmlacademy.ru">
+          <input class="search" id="search" type="search" name="search" placeholder="Поиск:">
+          <label class="visually-hidden" for="search">Поиск</label>
+        </form>
+        <a class="button header-menu-button" href="#nowhere">Закладки: 0</a>
+        <a class="button header-menu-button" href="#nowhere">Корзина: 0</a>
 
-        <button class="button order-button" type="button">Оформить заказ</button>
+        <a class="button order-button" href="#nowhere">Оформить заказ</a>
       </div>
 
-      <p class="introduction">
-        Интернет-магазин строительных материалов и инструментов для ремонта
-      </p>
+      <div class="header-middle">
+        <p class="introduction">
+          Интернет-магазин строительных материалов и инструментов для ремонта
+        </p>
 
-      <div class="contacts">
-        <p class="phone-number">+7 (812) 555-05-55</p>
-        <p class="address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
+        <div class="contacts">
+          <a class="header-phone-number" href="tel:+78125550555">+7 (812) 555-05-55</a>
+          <p class="header-company-address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
+        </div>
+
+        <ul class="user-account-buttons">
+          <li>
+            <a class="user-account-button enter-button" href="#nowhere">Войти</a>
+          </li>
+          <li class="user-account-button">
+            <a class="user-account-button registration-button" href="#nowhere">Регистрация</a>
+          </li>
+        </ul>
       </div>
-
-      <button class="button login-button" type="button">Войти</button>
-      <button class="button registration-button" type="button">Регистрация</button>
 
       <nav class="header-site-navigation">
-        <ul class="site-sections">
+        <ul class="site-pages">
           <li><a href="index.html">Главная</a></li>
           <li><a href="#nowhere">Компания</a></li>
           <li><a href="catalog.html">Каталог</a></li>
@@ -56,7 +65,7 @@
       <h1>Компания «Техномарт»</h1>
 
       <section>
-        <h2>Промо-блок</h2>
+        <h2 class="visually-hidden">Промо-блок</h2>
 
         <ul>
           <li>
@@ -103,7 +112,6 @@
             <a href="#nowhere">Бесплатно</a>
           </li>
         </ul>
-
       </section>
 
       <section>
@@ -112,32 +120,48 @@
           <a href="#nowhere">Все популярные товары</a>
         </div>
 
-        <ul>
-          <li>
+        <ul class="product-list">
+          <li class="product">
             <h3>Перфоратор BOSCH BFG 9000</h3>
-            <img src="img/perforator-popular-1.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 9000">
+            <img class="product-img" src="img/perforator-popular-1.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 9000">
+            <div class="order-panel">
+              <a class="button buy-button" href="#nowhere">Купить</a>
+              <button class="button bookmark-button" type="button">В закладки</button>
+            </div>
             <del>32500 р.</del>
-            <button type="button">25500 р.</button>
+            <p class="product-price">25500 р.</p>
           </li>
 
-          <li>
+          <li class="product">
             <h3>Перфоратор BOSCH BFG 3000</h3>
-            <img src="img/perforator-popular-2.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 3000">
+            <img class="product-img" src="img/perforator-popular-2.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 3000">
+            <div class="order-panel">
+              <a class="button buy-button" href="#nowhere">Купить</a>
+              <button class="button bookmark-button" type="button">В закладки</button>
+            </div>
             <del>22500 р.</del>
-            <button type="button">15500 р.</button>
+            <p class="product-price">15500 р.</p>
           </li>
 
-          <li>
+          <li class="product">
             <h3>Перфоратор BOSCH BFG 6000</h3>
-            <img src="img/perforator-popular-3.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 6000">
+            <img class="product-img" src="img/perforator-popular-3.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 6000">
+            <div class="order-panel">
+              <a class="button buy-button" href="#nowhere">Купить</a>
+              <button class="button bookmark-button" type="button">В закладки</button>
+            </div>
             <del>30500 р.</del>
-            <button type="button">25500 р.</button>
+            <p class="product-price">25500 р.</p>
           </li>
 
-          <li>
+          <li class="product new">
             <h3>Перфоратор BOSCH BFG 2000</h3>
-            <img src="img/perforator-popular-4.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 2000">
-            <button type="button">12500 р.</button>
+            <img class="product-img" src="img/perforator-popular-4.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 2000">
+            <div class="order-panel">
+              <a class="button buy-button" href="#nowhere">Купить</a>
+              <button class="button bookmark-button" type="button">В закладки</button>
+            </div>
+            <p class="product-price">12500 р.</p>
           </li>
         </ul>
       </section>
@@ -258,13 +282,13 @@
           Техномарт работает со многими транспортными компаниями:
         </p>
 
-        <ul class="transport-partners">
+        <ul class="partners">
           <li>Деловые линии</li>
           <li>Автотрейдинг</li>
           <li>ЖелДорЭкспедиция</li>
         </ul>
 
-        <a class="button more-info-button" href="#nowhere">Подробнее о компании</a>
+        <a class="button" href="#nowhere">Подробнее о компании</a>
       </section>
 
       <section class="map">
@@ -274,10 +298,10 @@
           Вы можете забрать товар сами, заехав в наш офис:
         </p>
         <a href="#nowhere"><img src="img/map.jpg" width="300" height="158" alt="Интерактивная карта"></a>
-        <button class="button write-us-button" type="button">Заблудились? Напишите нам!</button>
+        <button class="button" type="button">Заблудились? Напишите нам!</button>
       </section>
 
-      <section class="visually-hidden">
+      <section class="hidden">
         <h2>Написать письмо</h2>
 
         <button type="button" aria-label="Закрыть"></button>
@@ -305,21 +329,21 @@
       </section>
     </main>
 
-    <footer  class="footer">
-      <div  class="footer-company-info">
+    <footer class="footer">
+      <div class="footer-company-info">
         <p class="footer-logo">
           <a>
             <img src="img/logo-technomart.svg" width="137" height="22" alt="Логотип Техномарт">
           </a>
         </p>
 
-        <p class="company-address">
+        <p class="footer-company-address">
           г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8<br>
-          +7 (812) 555-05-55
+          <a class="footer-phone-number" href="tel:+78125550555">+7 (812) 555-05-55</a>
         </p>
 
         <nav class="footer-site-navigation">
-          <ul class="company-info-sections">
+          <ul class="company-info-pages">
             <li><a href="#nowhere">Компания</a></li>
             <li><a href="#nowhere">Новости</a></li>
             <li><a href="catalog.html">Каталог</a></li>
@@ -327,7 +351,7 @@
             <li><a href="#nowhere">Контакты</a></li>
           </ul>
 
-          <ul class="catalog-sections">
+          <ul class="catalog-pages">
             <li><a href="#nowhere">Материалы</a></li>
             <li><a href="#nowhere">Техника</a></li>
             <li><a href="#nowhere">Инструмент</a></li>
@@ -342,39 +366,33 @@
           Все права защищены
         </p>
 
-        <ul class="social-list">
+        <ul class="socials">
           <li>
-            <a href="#nowhere">
-              <object type="image/svg+xml" data="img/icon-vk.svg">
-                ВКонтакте
-              </object>
+            <a class="social social-vk" href="#nowhere">
+              <span class="visually-hidden">В контакте</span>
             </a>
           </li>
 
           <li>
-            <a href="#nowhere">
-              <object type="image/svg+xml" data="img/icon-fb.svg">
-                Фейсбук
-              </object>
+            <a class="social social-fb" href="#nowhere">
+              <span class="visually-hidden">Фейсбук</span>
             </a>
           </li>
 
           <li>
-            <a href="#nowhere">
-              <object type="image/svg+xml" data="img/icon-insta.svg">
-                Инстаграм
-              </object>
+            <a class="social social-insta" href="#nowhere">
+              <span class="visually-hidden">Инстаграм</span>
             </a>
           </li>
         </ul>
 
-        <p class="feedback">
+        <p class="developer-info">
           Обратная связь:
-          <a href="#nowhere" class="feedback-email">mail@htmlacademy.ru</a>
+          <a class="developer-email" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
         </p>
-        <p class="developed-by">
+        <p class="developer-info">
           Разработано —
-          <a class="developer-email" href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy.ru</a>
+          <a class="developer-site" href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy.ru</a>
         </p>
 
       </div>
