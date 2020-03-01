@@ -54,18 +54,23 @@ a {
   background-color: #293449;
 }
 
-.header-container {
+.flex-space-between-container {
   display: flex;
   justify-content: space-between;
 }
 
-.header-logo {
-  background-color: #ee3643;
-  box-shadow: 0 5px 0 0 #b52933;
-
+.company-logo {
   text-align: center;
 
   width: 220px;
+
+  background-color: #ee3643;
+  box-shadow: 0 5px 0 0 #b52933;
+}
+
+.header-logo {
+  line-height: 30px;
+  padding-top: 12px;
 }
 
 .header-logo:hover,
@@ -399,6 +404,50 @@ a {
   font-family: 'PT Sans', 'Arial', sans-serif;
 }
 
+.filter legend {
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 30px;
+
+  color: #000000;
+}
+
+.filter fieldset {
+  border: none;
+}
+
+.filter ul{
+  list-style: none;
+}
+
+.filter-list li {
+  font-size: 15px;
+  line-height: 20px;
+  text-transform: uppercase;
+}
+
+.filter-button {
+  font-size: 13px;
+
+  color: #000000;
+  background-color: #ffffff;
+
+  border: 1px solid #e5e5e5;
+  border-radius: 1px;
+}
+
+.filter-button:hover {
+  background-color: #c1c6ce;
+}
+
+.main-catalog-menu {
+  display: flex;
+}
+
+.product-menu {
+  width: 100%;
+}
+
 .new {
   position: relative;
   overflow: hidden;
@@ -428,6 +477,52 @@ a {
 
   color: #32425c;
   background-color: #f2f6f8;
+}
+
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+
+  margin-left: -20px;
+
+  padding: 0;
+}
+
+.product {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  width: 218px;
+
+  margin-top: 20px;
+  margin-left: 20px;
+
+  border: 1px solid #e5e5e5;
+}
+
+.product:hover,
+.product:focus-within {
+  box-shadow: 0 10px 25px -15px #000000;
+}
+
+.product:hover .order-panel {
+  visibility: visible;
+
+  background-color: #ffffff;
+}
+
+.order-panel {
+  visibility: hidden;
+
+  width: 100%;
+  height: 127px;
+
+  padding-top: 43px;
+
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .buy-button,
@@ -481,75 +576,6 @@ a {
   color: #c1c6ce;
   background-color: #ffffff;
   border-color: #c1c6ce;
-}
-
-.filter legend {
-  font-weight: bold;
-  font-size: 17px;
-  line-height: 30px;
-
-  color: #000000;
-}
-
-.filter fieldset {
-  border: none;
-}
-
-.filter ul{
-  list-style: none;
-}
-
-.filter-list li {
-  font-size: 15px;
-  line-height: 20px;
-  text-transform: uppercase;
-}
-
-.filter-button {
-  font-size: 13px;
-
-  color: #000000;
-  background-color: #ffffff;
-
-  border: 1px solid #e5e5e5;
-  border-radius: 1px;
-}
-
-.product {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-
-  width: 218px;
-
-  margin-top: 20px;
-  margin-right: 20px;
-
-  border: 1px solid #e5e5e5;
-}
-
-.product:hover,
-.product:focus-within {
-  box-shadow: 0 10px 25px -15px #000000;
-}
-
-.product:hover .order-panel {
-  visibility: visible;
-
-  background-color: #ffffff;
-}
-
-.order-panel {
-  visibility: hidden;
-
-  width: 100%;
-  height: 127px;
-
-  padding-top: 43px;
-
-  position: absolute;
-  top: 0;
-  left: 0;
 }
 
 .product h3 {
@@ -615,12 +641,17 @@ a {
   border-left-color: #ee3643;
 }
 
-.company-name {
-  font-size: 30px;
-  line-height: 30px;
+.about-us-block {
+  display: flex;
+  justify-content: space-between;
+}
 
-  text-transform: uppercase;
-  color: #000000;
+.about-us {
+  width: 560px;
+}
+
+.map {
+  width: 330px;
 }
 
 .features,
@@ -630,6 +661,18 @@ a {
   line-height: 24px;
 
   color: #000000;
+}
+
+.about-us-header {
+  font-size: 30px;
+  line-height: 30px;
+
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.map-header {
+  font-weight: normal;
 }
 
 .partners {
@@ -643,32 +686,48 @@ a {
   color: #000000;
 }
 
-.map-header {
-  font-size: 30px;
-  line-height: 30px;
-  font-weight: normal;
-
-  color: #000000;
+.presentation-text-block {
+  background-color: #f2f6f8;
 }
 
-.footer-company-info {
+.presentation-text-block h2 {
+  font-size: 30px;
+  font-weight: normal;
+  text-transform: uppercase;
+
+  margin-top: 0;
+  margin-bottom: 35px;
+  padding-top: 56px;
+}
+
+.presentation-text-block p {
+  font-family: 'PT Sans', 'Arial', sans-serif;
+  margin: 0;
+  padding-bottom: 74px;
+}
+
+.footer-upper-panel {
   background-color: #32425c;
 }
 
 .footer-logo {
-  display: flex;
-}
+  display: block;
+  text-align: center;
 
-.footer-logo a {
-  background-color: #ee3643;
-  box-shadow: inset 0 -5px 0 0 #b52933;
+  line-height: 43px;
 
-  padding: 16px 41px 20px;
+  padding-top: 20px;
+
 }
 
 .footer-company-address {
   font-size: 18px;
   line-height: 24px;
+
+  margin-top: 30px;
+  margin-bottom: 50px;
+  padding-right: 10px;
+  padding-left: 5px;
 
   color: #f3f7f9;
 }
