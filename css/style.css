@@ -332,20 +332,24 @@ a {
 
 .site-pages {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: center;
 
   list-style: none;
 
   font-size: 17px;
 
   margin: 0;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding: 0;
 
   color: #ffffff;
   background-color: #32425c;
 
   box-shadow: inset 0 -5px 0 0 #293449;
+}
+
+.site-pages li {
+  flex-grow: 1;
 }
 
 .site-pages a {
@@ -428,12 +432,21 @@ a {
 
 .buy-button,
 .bookmark-button {
+  display: block;
   font-family: 'Cuprum', sans-serif;
 
-  border-radius: 1px;
+  margin-right: auto;
+  margin-bottom: 8px;
+  margin-left: auto;
+
+  border-radius: 2px;
 }
 
 .buy-button {
+  width: 135px;
+
+  line-height: 38px;
+
   background-color: #63a63e;
   box-shadow: inset 0 -3px 0 0 #367315;
 }
@@ -448,6 +461,10 @@ a {
 }
 
 .bookmark-button {
+  width: 129px;
+
+  line-height: 32px;
+
   color: #32425c;
   background-color: #ffffff;
 
@@ -503,7 +520,7 @@ a {
   flex-direction: column;
   position: relative;
 
-  width: 220px;
+  width: 218px;
 
   margin-top: 20px;
   margin-right: 20px;
@@ -526,7 +543,9 @@ a {
   visibility: hidden;
 
   width: 100%;
-  height: 170px;
+  height: 127px;
+
+  padding-top: 43px;
 
   position: absolute;
   top: 0;
@@ -538,30 +557,47 @@ a {
   font-size: 18px;
   line-height: 20px;
 
+  text-align: center;
+
+  margin: 0;
+  padding-left: 30px;
+  padding-right: 30px;
+
   color: #000000;
 }
 
 .product-href {
   text-decoration: none;
+
+  margin-bottom: 15px;
 }
 
 .product-list del {
+  text-align: center;
+
   font-weight: bold;
   font-size: 17px;
   line-height: 18px;
+
+  margin-bottom: 10px;
 
   color: #999999;
 }
 
 .product-price {
   position: relative;
-  text-align: center;
+  text-align: left;
 
   font-size: 17px;
   font-weight: bold;
   line-height: 38px;
 
-  width: 160px;
+  width: 125px;
+
+  margin-top: auto;
+  margin-left: 40px;
+  margin-bottom: 20px;
+  padding-left: 35px;
 
   color: #ffffff;
   background-color: #ee3643;
