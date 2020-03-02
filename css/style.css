@@ -54,9 +54,8 @@ a {
   background-color: #293449;
 }
 
-.flex-space-between-container {
+.flex-container {
   display: flex;
-  justify-content: space-between;
 }
 
 .company-logo {
@@ -158,17 +157,17 @@ a {
 .header-middle {
   display: flex;
 
-  margin-bottom: 40px;
+  margin-bottom: 34px;
 }
 
 .introduction {
-  font-size: 16px;
+  font-size: 15px;
   line-height: 23px;
   font-style: italic;
 
   margin: 0;
-  padding-top: 7px;
-  padding-left: 50px;
+  padding-top: 2px;
+  padding-left: 52px;
   padding-right: 30px;
 
   width: 220px;
@@ -223,6 +222,7 @@ a {
 
 .user-account-buttons-offline {
   display: flex;
+  align-items: flex-start;
 }
 
 .user-account-buttons-online {
@@ -242,6 +242,8 @@ a {
   line-height: 45px;
 
   margin-left: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
 
   color: #000000;
   background-color: #ffffff;
@@ -251,10 +253,9 @@ a {
 .enter-button {
   position: relative;
 
-  padding-left: 28px;
+  padding-left: 38px;
 
-  width: 93px;
-  height: 45px;
+  width: 83px;
 
   background-image: url("../img/icon-login.svg");
   background-position: 15px center;
@@ -262,7 +263,6 @@ a {
 
 .registration-button {
   width: 150px;
-  height: 45px;
 }
 
 .account-settings-button {
@@ -270,8 +270,7 @@ a {
 
   text-align: left;
 
-  margin: 0;
-  padding-left: 45px;
+  padding-left: 40px;
   padding-right: 5px;
 
   background-image: url("../img/icon-user.svg");
@@ -345,7 +344,8 @@ a {
   font-size: 17px;
 
   margin: 0;
-  padding: 0;
+  padding-left: 21px;
+  padding-right: 25px;
 
   color: #ffffff;
   background-color: #32425c;
@@ -360,7 +360,7 @@ a {
 .site-pages a {
   display: block;
 
-  line-height: 60px;
+  line-height: 61px;
 
   text-align: center;
   text-decoration: none;
@@ -483,6 +483,8 @@ a {
   display: flex;
   flex-wrap: wrap;
 
+  list-style: none;
+
   margin-left: -20px;
 
   padding: 0;
@@ -501,7 +503,10 @@ a {
   border: 1px solid #e5e5e5;
 }
 
-.product:hover,
+.product:hover {
+  box-shadow: 0 10px 25px -15px #000000;
+}
+
 .product:focus-within {
   box-shadow: 0 10px 25px -15px #000000;
 }
@@ -734,6 +739,10 @@ a {
 
 .footer-phone-number {
   text-decoration: none;
+}
+
+.footer-site-navigation {
+  margin-left: auto;
 }
 
 .footer-site-navigation ul {
