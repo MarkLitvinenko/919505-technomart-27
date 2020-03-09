@@ -20,8 +20,12 @@
             <input class="search-input" id="search" type="search" name="search" placeholder="Поиск:">
             <label class="visually-hidden" for="search">Поиск</label>
           </form>
-          <a class="button header-menu-button bookmarks-button" href="#nowhere">Закладки: 0</a>
-          <a class="button header-menu-button cart-button cart-button-not-empty" href="#nowhere">Корзина: 10</a>
+          <a class="button header-menu-button bookmarks-button" href="#nowhere">
+            <img class="header-menu-icon bookmark-icon" src="img/icon-bookmark.svg" width="14" height="16" alt="Иконка закладки">
+            Закладки: 0</a>
+          <a class="button header-menu-button cart-button cart-button-not-empty" href="#nowhere">
+            <img class="header-menu-icon cart-icon" src="img/icon-cart.svg" width="15" height="15" alt="Иконка корзины">
+            Корзина: 10</a>
 
           <a class="button header-menu-button order-button" href="#nowhere">Оформить заказ</a>
         </div>
@@ -39,8 +43,12 @@
 
         <div class="user-account-buttons user-account-buttons-online">
           <div class="user-upper-panel ">
-            <a class="user-account-button account-settings-button" href="#nowhere">Равшан Джамшутович</a>
-            <a class="user-account-button logout-button" href="#nowhere"></a>
+            <a class="user-account-button account-settings-button" href="#nowhere">
+              <img class="user-account-icon user-icon" src="img/icon-user.svg" width="20" height="18" alt="Иконка пользователя">
+              Равшан Джамшутович</a>
+            <a class="user-account-button logout-button" href="#nowhere">
+              <img class="user-account-icon logout-icon" src="img/icon-logout.svg" width="21" height="17" alt="Иконка выхода">
+            </a>
           </div>
 
           <div class="user-lower-panel">
@@ -52,13 +60,13 @@
 
       <nav class="container header-site-navigation">
         <ul class="site-pages">
-          <li><a href="index.html">Главная</a></li>
-          <li><a href="#nowhere">Компания</a></li>
-          <li><a href="catalog.html">Каталог</a></li>
-          <li><a href="#nowhere">Новости</a></li>
-          <li><a href="#nowhere">Спецпредложения</a></li>
-          <li><a href="#nowhere">Доставка</a></li>
-          <li><a href="#nowhere">Контакты</a></li>
+          <li class="site-page"><a href="index.html">Главная</a></li>
+          <li class="site-page"><a href="#nowhere">Компания</a></li>
+          <li class="site-page"><a href="catalog.html">Каталог</a></li>
+          <li class="site-page"><a href="#nowhere">Новости</a></li>
+          <li class="site-page"><a href="#nowhere">Спецпредложения</a></li>
+          <li class="site-page"><a href="#nowhere">Доставка</a></li>
+          <li class="site-page"><a href="#nowhere">Контакты</a></li>
         </ul>
       </nav>
   </header>
@@ -190,7 +198,7 @@
                 </ul>
               </div>
 
-              <ul class="product-list">
+              <ul class="card-list">
                 <li class="product">
                   <img class="product-img" src="img/perforator-1.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 3000">
                   <a class="product-href" href="#nowhere"><h3>Перфоратор BOSCH BFG 3000</h3></a>
@@ -354,8 +362,8 @@
         </div>
       </div>
 
-      <div class="footer-copyright-social-feedback">
-        <div class="container">
+      <div class="footer-lower-panel">
+        <div class="container footer-lower-panel-container">
           <p class="copyright">
             © 2010–2019 Компания «Техномарт»<br>
             Все права защищены
@@ -381,19 +389,21 @@
             </li>
           </ul>
 
-          <p class="developer-info">
-            Обратная связь:
-            <a class="developer-email" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
-          </p>
-          <p class="developer-info">
-            Разработано —
-            <a class="developer-site" href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy.ru</a>
-          </p>
+          <div class="developer-info-container">
+            <p class="developer-info developer-email">
+              Обратная связь:
+              <a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+            </p>
+            <p class="developer-info developer-site">
+              Разработано —
+              <a href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy.ru</a>
+            </p>
+          </div>
         </div>
       </div>
     </footer>
 
-    <div>
+    <div class="hidden">
       <button type="button">Купить</button>
       <button type="button">В закладки</button>
     </div>
