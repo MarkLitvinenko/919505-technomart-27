@@ -1508,14 +1508,13 @@ a {
 }
 
 .footer-site-navigation ul {
-  list-style: none;
-  font-size: 18px;
-  line-height: 24px;
-}
-
-.footer-site-navigation-list {
   display: flex;
   flex-wrap: wrap;
+
+  list-style: none;
+
+  font-size: 18px;
+  line-height: 24px;
 
   margin-bottom: 10px;
 }
