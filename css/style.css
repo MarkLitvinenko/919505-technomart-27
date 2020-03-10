@@ -103,6 +103,10 @@ a {
   box-shadow: 0 5px 0 0 #8e1e26;
 }
 
+.search-form {
+  position: relative;
+}
+
 .search-input {
   font-family: inherit;
   font-size: 17px;
@@ -111,8 +115,18 @@ a {
   width: 270px;
   height: 42px;
 
+  padding-bottom: 2px;
+  padding-left: 48px;
+
   background-color: transparent;
   border: none;
+}
+
+.search-icon {
+  position: absolute;
+
+  top: 0;
+  left: 0;
 }
 
 .search-input::placeholder {
@@ -121,6 +135,21 @@ a {
 
 .search-input:hover {
   background-color: #212a3a;
+}
+
+.search-input:hover + .search-icon line,
+.search-input:hover + .search-icon circle {
+  stroke: #ffffff;
+}
+
+.search-input:active + .search-icon line,
+.search-input:active + .search-icon circle {
+  stroke: #6a7180;
+}
+
+.search-input:focus + .search-icon line,
+.search-input:focus + .search-icon circle {
+  stroke: #ee3643;
 }
 
 .search-input:active {
