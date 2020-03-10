@@ -312,41 +312,6 @@
             <button class="button write-us-button" type="button">Заблудились? Напишите нам!</button>
           </section>
 
-          <section class="hidden write-us-section">
-            <div class="write-us-form-header">
-              <h2 class=" visually-hidden h2-header">Написать письмо</h2>
-
-              <button class="close-button" type="button" aria-label="Закрыть">
-                <svg class="close-button-icon" width="24" height="24">
-                  <line x1="2" y1="2" x2="21" y2="21" stroke="#ee3643" stroke-width="4"></line>
-                  <line x1="2" y1="21" x2="21" y2="2" stroke="#ee3643" stroke-width="4"></line>
-                </svg>
-              </button>
-            </div>
-
-            <form class="write-us-form" method="post" action="https://echo.htmlacademy.ru">
-              <div class="form-input-container">
-                <p>
-                  <label for="name">Ваше имя:</label>
-                  <input class="write-us-input" id="name" type="text" name="name" placeholder="Имя Фамилия">
-                </p>
-
-                <p>
-                  <label for="email">Ваш e-mail:</label>
-                  <input class="write-us-input" id="email" type="email" name="email" placeholder="email@example.com">
-                </p>
-
-                <p class="textarea-block">
-                  <label for="message">Текст письма:</label>
-                  <textarea class="write-us-input write-us-textarea" id="message" name="message" rows="5" placeholder="В свободной форме"></textarea>
-                </p>
-              </div>
-
-              <div class="write-us-form-footer">
-                <button class="button write-us-form-submit-button" type="submit">Отправить</button>
-              </div>
-            </form>
-          </section>
         </div>
       </div>
     </main>
@@ -424,5 +389,41 @@
         </div>
       </div>
     </footer>
+
+    <section class="modal write-us-section">
+      <div class="write-us-form-header">
+        <h2 class=" visually-hidden h2-header">Написать письмо</h2>
+
+        <button class="modal-close-button" type="button" aria-label="Закрыть">
+          <svg width="24" height="24">
+            <line x1="2" y1="2" x2="21" y2="21" stroke="#ee3643" stroke-width="4"></line>
+            <line x1="2" y1="21" x2="21" y2="2" stroke="#ee3643" stroke-width="4"></line>
+          </svg>
+        </button>
+      </div>
+
+      <form class="write-us-form" method="post" action="https://echo.htmlacademy.ru">
+        <div class="form-input-container">
+          <p>
+            <label for="name">Ваше имя:</label>
+            <input class="write-us-input" id="name" type="text" name="name" placeholder="Имя Фамилия">
+          </p>
+
+          <p>
+            <label for="email">Ваш e-mail:</label>
+            <input class="write-us-input" id="email" type="email" name="email" placeholder="email@example.com">
+          </p>
+
+          <p class="textarea-block">
+            <label for="message">Текст письма:</label>
+            <textarea class="write-us-input write-us-textarea" id="message" name="message" rows="5" placeholder="В свободной форме"></textarea>
+          </p>
+        </div>
+
+        <div class="write-us-form-footer">
+          <button class="button write-us-form-submit-button" type="submit">Отправить</button>
+        </div>
+      </form>
+    </section>
   </body>
 </html>
