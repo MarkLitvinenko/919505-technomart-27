@@ -26,17 +26,11 @@
             <label class="visually-hidden" for="search">Поиск</label>
           </form>
 
-          <a class="button header-menu-button bookmarks-button" href="#nowhere">
-            <img class="header-menu-icon bookmark-icon" src="img/icon-bookmark.svg" width="14" height="16" alt="Иконка закладки">
-            Закладки: 0
-          </a>
+          <a class="header-menu-button bookmarks-button" href="#nowhere">Закладки: 0</a>
 
-          <a class="button header-menu-button cart-button" href="#nowhere">
-            <img class="header-menu-icon cart-icon" src="img/icon-cart.svg" width="15" height="15" alt="Иконка корзины">
-            Корзина: 0
-          </a>
+          <a class="header-menu-button cart-button" href="#nowhere">Корзина: 0</a>
 
-          <a class="button header-menu-button order-button" href="#nowhere">Оформить заказ</a>
+          <a class="header-menu-button order-button" href="#nowhere">Оформить заказ</a>
         </div>
       </div>
 
@@ -51,9 +45,8 @@
         </div>
 
         <div class="user-account-buttons user-account-buttons-offline">
-          <a class="user-account-button login-button" href="#nowhere">
-            <img class="user-account-icon login-icon" src="img/icon-login.svg" width="20" height="17" alt="Иконка логина">
-            Войти</a>
+          <a class="user-account-button login-button" href="#nowhere">Войти</a>
+
           <a class="user-account-button registration-button" href="#nowhere">Регистрация</a>
         </div>
       </div>
@@ -76,22 +69,29 @@
         <h1 class="visually-hidden">Компания «Техномарт»</h1>
 
         <section class="promo-block">
-          <h2 class="h2-header visually-hidden">Промо-блок</h2>
+          <h2 class="section-header visually-hidden">Промо-блок</h2>
 
-          <div class="left-promo-block">
-            <ul class="product-categories">
-              <li class="promo-category product-category new">
-                <h3>Материалы</h3>
-                <a class="button promo-category-button product-category-button" href="#nowhere">На любой вкус</a>
-              </li>
+          <ul class="product-categories">
+            <li class="promo-category product-category new">
+              <h3>Материалы</h3>
+              <a class="button promo-category-button product-category-button" href="#nowhere">На любой вкус</a>
+            </li>
 
-              <li class="promo-category product-category">
-                <h3>Инструмент</h3>
-                <a class="button promo-category-button product-category-button" href="#nowhere">На все случаи</a>
-              </li>
-            </ul>
+            <li class="promo-category product-category">
+              <h3>Инструмент</h3>
+              <a class="button promo-category-button product-category-button" href="#nowhere">На все случаи</a>
+            </li>
 
+            <li class="promo-category product-category">
+              <h3>Техника</h3>
+              <a class="button promo-category-button product-category-button" href="#nowhere">Для стройки</a>
+            </li>
+          </ul>
+
+          <div class="lower-promo-block">
             <div class="promo-slider">
+              <button type="button">Назад</button>
+              <button type="button">Вперед</button>
 
               <div class="hidden promo-slide promo-slide-1">
                 <h3>Перфораторы</h3>
@@ -102,77 +102,70 @@
               <div class="promo-slide promo-slide-2">
                 <h3>Дрели</h3>
                 <p>Соседям на радость!</p>
-                <button type="button">Назад</button>
-                <button type="button">Вперед</button>
-                <a href="catalog.html">Открыть каталог</a>
+                <a class="button" href="catalog.html">Открыть каталог</a>
               </div>
             </div>
+
+            <ul class="service-categories">
+              <li class="promo-category service-category">
+                <h3>Скидки 50%</h3>
+                <a class="button promo-category-button service-category-button" href="#nowhere">На 350 товаров</a>
+              </li>
+
+              <li class="promo-category service-category">
+                <h3>Доставка</h3>
+                <a class="button promo-category-button service-category-button" href="#nowhere">Бесплатно</a>
+              </li>
+            </ul>
           </div>
-
-          <ul class="service-categories">
-            <li class="promo-category service-category">
-              <h3>Техника</h3>
-              <a class="button promo-category-button service-category-button" href="#nowhere">Для стройки</a>
-            </li>
-
-            <li class="promo-category service-category">
-              <h3>Скидки 50%</h3>
-              <a class="button promo-category-button service-category-button" href="#nowhere">На 350 товаров</a>
-            </li>
-
-            <li class="promo-category service-category">
-              <h3>Доставка</h3>
-              <a class="button promo-category-button service-category-button" href="#nowhere">Бесплатно</a>
-            </li>
-          </ul>
         </section>
 
         <section class="index-section">
-          <div class="section-header">
-            <h2 class="h2-header">Популярные товары:</h2>
+          <div class="section-header-wrap">
+            <h2 class="section-header">Популярные товары:</h2>
             <a class="button view-all-button" href="#nowhere">Все популярные товары</a>
           </div>
 
           <ul class="card-list">
-            <li class="product">
+            <li class="card product-card">
               <img class="product-img" src="img/perforator-popular-1.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 9000">
-              <a class="product-href" href="#nowhere"><h3>Перфоратор BOSCH BFG 9000</h3></a>
+              <h3><a class="product-href" href="#nowhere">Перфоратор BOSCH BFG 9000</a></h3>
               <div class="order-panel">
-                <a class="button buy-button" href="#nowhere">Купить</a>
-                <a class="button add-to-bookmarks-button" href="#nowhere">В закладки</a>
+                <a class="order-panel-button buy-button" href="#nowhere">Купить</a>
+                <a class="order-panel-button add-to-bookmarks-button" href="#nowhere">В закладки</a>
               </div>
               <del>32500 р.</del>
               <p class="product-price">25500 р.</p>
             </li>
 
-            <li class="product">
+            <li class="card product-card">
               <img class="product-img" src="img/perforator-popular-2.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 3000">
-              <a class="product-href" href="#nowhere"><h3>Перфоратор BOSCH BFG 3000</h3></a>
+              <h3><a class="product-href" href="#nowhere">Перфоратор BOSCH BFG 3000</a></h3>
               <div class="order-panel">
-                <a class="button buy-button" href="#nowhere">Купить</a>
-                <a class="button add-to-bookmarks-button" href="#nowhere">В закладки</a>
+                <a class="order-panel-button buy-button" href="#nowhere">Купить</a>
+                <a class="order-panel-button add-to-bookmarks-button" href="#nowhere">В закладки</a>
               </div>
               <del>22500 р.</del>
               <p class="product-price">15500 р.</p>
             </li>
 
-            <li class="product">
+            <li class="card product-card">
               <img class="product-img" src="img/perforator-popular-3.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 6000">
-              <a class="product-href" href="#nowhere"><h3>Перфоратор BOSCH BFG 6000</h3></a>
+              <h3><a class="product-href" href="#nowhere">Перфоратор BOSCH BFG 6000</a></h3>
               <div class="order-panel">
-                <a class="button buy-button" href="#nowhere">Купить</a>
-                <a class="button add-to-bookmarks-button" href="#nowhere">В закладки</a>
+                <a class="order-panel-button buy-button" href="#nowhere">Купить</a>
+                <a class="order-panel-button add-to-bookmarks-button" href="#nowhere">В закладки</a>
               </div>
               <del>30500 р.</del>
               <p class="product-price">25500 р.</p>
             </li>
 
-            <li class="product new">
+            <li class="card product-card new">
               <img class="product-img" src="img/perforator-popular-4.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 2000">
-              <a class="product-href" href="#nowhere"><h3>Перфоратор BOSCH BFG 2000</h3></a>
+              <h3><a class="product-href" href="#nowhere">Перфоратор BOSCH BFG 2000</a></h3>
               <div class="order-panel">
-                <a class="button buy-button" href="#nowhere">Купить</a>
-                <a class="button add-to-bookmarks-button" href="#nowhere">В закладки</a>
+                <a class="order-panel-button buy-button" href="#nowhere">Купить</a>
+                <a class="order-panel-button add-to-bookmarks-button" href="#nowhere">В закладки</a>
               </div>
               <p class="product-price">12500 р.</p>
             </li>
@@ -180,56 +173,56 @@
         </section>
 
         <section class="index-section">
-          <div class="section-header">
-            <h2 class="h2-header">Популярные производители:</h2>
+          <div class="section-header-wrap">
+            <h2 class="section-header">Популярные производители:</h2>
             <a class="button view-all-button" href="#nowhere">Все производители</a>
           </div>
 
           <ul class="card-list">
-            <li class="popular-manufacturer">
-              <a href="#nowhere">
+            <li>
+              <a class="card popular-manufacturer-card" href="#nowhere">
                 <img src="img/bosch.png" width="126" height="37" alt="Bosch">
               </a>
             </li>
 
-            <li class="popular-manufacturer">
-              <a href="#nowhere">
+            <li>
+              <a class="card popular-manufacturer-card" href="#nowhere">
                 <img src="img/makita.png" width="123" height="40" alt="Makita">
               </a>
             </li>
 
-            <li class="popular-manufacturer">
-              <a href="#nowhere">
+            <li>
+              <a class="card popular-manufacturer-card" href="#nowhere">
                 <img src="img/dewalt.png" width="146" height="44" alt="Dewalt">
               </a>
             </li>
 
-            <li class="popular-manufacturer">
-              <a href="#nowhere">
+            <li>
+              <a class="card popular-manufacturer-card" href="#nowhere">
                 <img src="img/interskol.png" width="200" height="88" alt="Интерскол">
               </a>
             </li>
 
-            <li class="popular-manufacturer">
-              <a href="#nowhere">
+            <li>
+              <a class="card popular-manufacturer-card" href="#nowhere">
                 <img src="img/hitachi.png" width="169" height="31" alt="Hitachi">
               </a>
             </li>
 
-            <li class="popular-manufacturer">
-              <a href="#nowhere">
+            <li>
+              <a class="card popular-manufacturer-card" href="#nowhere">
                 <img src="img/lg.png" width="121" height="73" alt="LG">
               </a>
             </li>
 
-            <li class="popular-manufacturer">
-              <a href="#nowhere">
+            <li>
+              <a class="card popular-manufacturer-card" href="#nowhere">
                 <img src="img/aeg.png" width="151" height="96" alt="AEG">
               </a>
             </li>
 
-            <li class="popular-manufacturer">
-              <a href="#nowhere">
+            <li>
+              <a class="card popular-manufacturer-card" href="#nowhere">
                 <img src="img/metabo.png" width="204" height="69" alt="Metabo">
               </a>
             </li>
@@ -239,35 +232,35 @@
 
       <section class="services-section">
        <div class="services-section-header container">
-         <h2 class="h2-header">Сервисы</h2>
+         <h2 class="section-header">Сервисы</h2>
          <p>
            Хороший интернет-магазин отличается от плохого не только ценами! Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.
          </p>
 
-         <div class="slider-2">
-           <ul class="slider-2-buttons">
+         <div class="services-slider">
+           <ul class="services-slider-buttons">
              <li>
-               <a class="button slider-2-button" href="#nowhere">Доставка</a>
+               <a class="services-slider-button" href="#nowhere">Доставка</a>
              </li>
 
              <li>
-               <a class="button slider-2-button" href="#nowhere">Гарантия</a>
+               <a class="services-slider-button" href="#nowhere">Гарантия</a>
              </li>
 
              <li>
-               <a class="button slider-2-button" href="#nowhere">Кредит</a>
+               <a class="services-slider-button" href="#nowhere">Кредит</a>
              </li>
            </ul>
 
-           <div class="slider-2-slides">
-             <div class="slider-2-slide slider-2-slide-1">
+           <div class="services-slider-slides">
+             <div class="services-slider-slide services-slider-slide-1">
                <h3>Доставка</h3>
                <p>
                  Мы с удовольствием доставим ваш товар прямо<br>к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем,<br>поднимая его на ваш этаж!
                </p>
              </div>
 
-             <div class="hidden slider-2-slide slider-2-slide-2">
+             <div class="hidden services-slider-slide services-slider-slide-2">
                <h3>Гарантия</h3>
                <p>
                  Если купленный у нас товар поломается или заискрит,<br>а также в случае пожара, спровоцированного его возгоранием,
@@ -275,7 +268,7 @@
                </p>
              </div>
 
-             <div class="hidden slider-2-slide slider-2-slide-3">
+             <div class="hidden services-slider-slide services-slider-slide-3">
                <h3>Кредит</h3>
                <p>
                  Залезть в долговую яму стало проще!<br>Кредитные консультанты придут вам на помощь.
@@ -290,8 +283,8 @@
       <div class="container">
         <div class="about-us-block">
           <section class="about-us">
-            <h2 class="h2-header visually-hidden">О нас</h2>
-            <p class="h2-header">Компания «Техномарт»</p>
+            <h2 class="section-header visually-hidden">О нас</h2>
+            <p class="section-header">Компания «Техномарт»</p>
             <p class="feature main-feature">
               Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для ремонта и строительства не оставит равнодушными любителей сэкономить на гастарбайтерах.
             </p>
@@ -312,7 +305,7 @@
           </section>
 
           <section class="map">
-            <h2 class="h2-header map-header">Контакты</h2>
+            <h2 class="section-header map-header">Контакты</h2>
 
             <p class="feature">
               Вы можете забрать товар сами, заехав в наш офис:
@@ -401,7 +394,7 @@
 
     <section class="modal write-us-section">
       <div class="write-us-form-header">
-        <h2 class=" visually-hidden h2-header">Написать письмо</h2>
+        <h2 class="visually-hidden section-header">Написать письмо</h2>
 
         <button class="modal-close-button" type="button" aria-label="Закрыть">
           <svg width="24" height="24">
@@ -412,20 +405,20 @@
       </div>
 
       <form class="write-us-form" method="post" action="https://echo.htmlacademy.ru">
-        <div class="form-input-container">
+        <div class="write-us-form-input-container">
           <p>
             <label for="name">Ваше имя:</label>
-            <input class="write-us-input" id="name" type="text" name="name" placeholder="Имя Фамилия">
+            <input class="write-us-form-input" id="name" type="text" name="name" placeholder="Имя Фамилия">
           </p>
 
           <p>
             <label for="email">Ваш e-mail:</label>
-            <input class="write-us-input" id="email" type="email" name="email" placeholder="email@example.com">
+            <input class="write-us-form-input" id="email" type="email" name="email" placeholder="email@example.com">
           </p>
 
-          <p class="textarea-block">
+          <p class="write-us-form-textarea-block">
             <label for="message">Текст письма:</label>
-            <textarea class="write-us-input write-us-textarea" id="message" name="message" rows="5" placeholder="В свободной форме"></textarea>
+            <textarea class="write-us-form-input write-us-form-textarea" id="message" name="message" rows="5" placeholder="В свободной форме"></textarea>
           </p>
         </div>
 
