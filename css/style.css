@@ -570,14 +570,14 @@ a {
 }
 
 .promo-block {
-  display: flex;
-
-  margin-bottom: 53px;
+  margin-bottom: 33px;
   padding-top: 59px;
 }
 
-.left-promo-block {
-  width: 621px;
+.lower-promo-block {
+  display: flex;
+
+  margin-bottom: 20px;
 }
 
 .product-categories {
@@ -586,7 +586,7 @@ a {
   list-style: none;
 
   margin-top: 0;
-  margin-bottom: 20px;
+  margin-bottom: 0;
   margin-left: -20px;
   padding: 0;
 }
@@ -596,6 +596,7 @@ a {
 
   width: 278px;
 
+  margin-bottom: 20px;
   margin-left: 20px;
   padding-top: 21px;
   padding-left: 22px;
@@ -651,14 +652,32 @@ a {
   background-position: 197px 33px;
 }
 
+.product-category:nth-child(3) {
+  background-color: #dc91d8;
+
+  background-image: url("../img/promo-block-equipment.svg");
+  background-position: 191px 31px;
+}
+
 .product-category-button {
   margin-bottom: 22px;
   margin-left: 3px;
 }
 
+.promo-slider {
+  position: relative;
+}
+
 .promo-slide {
+  width: 596px;
+  min-height: 243px;
+
   padding-top: 23px;
   padding-left: 24px;
+}
+
+.promo-slider button {
+  position: absolute;
 }
 
 .promo-slider p {
@@ -697,31 +716,24 @@ a {
 
   margin-top: -20px;
   margin-bottom: 0;
-  padding: 0;
+  padding-top: 20px;
+  padding-left: 0;
 }
 
 .service-category {
-  margin-top: 20px;
   padding-bottom: 1px;
 
   background-repeat: no-repeat;
 }
 
 .service-category:nth-child(1) {
-  background-color: #dc91d8;
-
-  background-image: url("../img/promo-block-equipment.svg");
-  background-position: 191px 31px;
-}
-
-.service-category:nth-child(2) {
   background-color: #8ed78f;
 
   background-image: url("../img/promo-block-discounts.svg");
   background-position: 196px 26px;
 }
 
-.service-category:nth-child(3) {
+.service-category:nth-child(2) {
   background-color: #ffc047;
 
   background-image: url("../img/promo-block-delivery.svg");
