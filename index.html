@@ -71,7 +71,7 @@
           <h2 class="section-header visually-hidden">Промо-блок</h2>
 
           <ul class="product-categories">
-            <li class="promo-category product-category new">
+            <li class="promo-category product-category new new-category">
               <h3>Материалы</h3>
               <a class="button promo-category-button product-category-button" href="#nowhere">На любой вкус</a>
             </li>
@@ -89,19 +89,30 @@
 
           <div class="lower-promo-block">
             <div class="promo-slider">
-              <button type="button">Назад</button>
-              <button type="button">Вперед</button>
+              <div class="promo-slider-buttons">
+                <button class="promo-slider-button promo-slider-button-back" type="button"></button>
+                <button class="promo-slider-button promo-slider-button-next" type="button"></button>
+              </div>
 
               <div class="hidden promo-slide promo-slide-1">
                 <h3>Перфораторы</h3>
                 <p>Настоящие мужские игрушки</p>
-                <a href="catalog.html">Открыть каталог</a>
+                <a class="button" href="catalog.html">Открыть каталог</a>
+                <ul class="promo-slide-dots">
+                  <li class="promo-slide-dot promo-slide-dot-current"></li>
+                  <li class="promo-slide-dot"></li>
+                </ul>
               </div>
 
               <div class="promo-slide promo-slide-2">
                 <h3>Дрели</h3>
                 <p>Соседям на радость!</p>
+
                 <a class="button" href="catalog.html">Открыть каталог</a>
+                <ul class="promo-slide-dots">
+                  <li class="promo-slide-dot"></li>
+                  <li class="promo-slide-dot promo-slide-dot-current"></li>
+                </ul>
               </div>
             </div>
 
@@ -312,7 +323,7 @@
             <p class="feature">
               Вы можете забрать товар сами, заехав в наш офис:
             </p>
-            <a class="interactive-map" href="#nowhere"><img src="img/map.jpg" width="300" height="158" alt="Интерактивная карта"></a>
+            <a class="interactive-map" href="#nowhere"><img class="interactive-map-img" src="img/map.jpg" width="300" height="158" alt="г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8"></a>
             <button class="button write-us-button" type="button">Заблудились? Напишите нам!</button>
           </section>
 
@@ -394,16 +405,10 @@
       </div>
     </footer>
 
-    <section class="modal write-us-section">
-      <div class="write-us-form-header">
+    <section class="modal modal-window write-us-section">
+      <div class="modal-header">
         <h2 class="visually-hidden section-header">Написать письмо</h2>
-
-        <button class="modal-close-button" type="button" aria-label="Закрыть">
-          <svg width="24" height="24">
-            <line x1="2" y1="2" x2="21" y2="21" stroke="#ee3643" stroke-width="4"></line>
-            <line x1="2" y1="21" x2="21" y2="2" stroke="#ee3643" stroke-width="4"></line>
-          </svg>
-        </button>
+        <button class="modal-close-button" type="button" aria-label="Закрыть"></button>
       </div>
 
       <form class="write-us-form" method="post" action="https://echo.htmlacademy.ru">
@@ -429,5 +434,153 @@
         </div>
       </form>
     </section>
+
+    <section class="modal popup-map-section">
+    <div class="modal-header">
+      <h2 class="visually-hidden section-header">Как до нас добраться</h2>
+      <button class="modal-close-button" type="button" aria-label="Закрыть"></button>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037999040354!2d30.322010416394033!3d59.938716271971415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2sBolshaya+Konyushennaya+ul.%2C+19%2C+Sankt-Peterburg%2C+Russia%2C+191186!5e0!3m2!1sen!2s!4v1441888483426" width="940" height="446" allowfullscreen></iframe>
+      <img src="img/popup-map.jpg" width="940" height="446" alt="г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8">
+    </div>
+
+  </section>
+
+    <section class="modal modal-window popup-added-to-cart-section">
+      <div class="modal-header">
+        <button class="modal-close-button" type="button" aria-label="Закрыть"></button>
+      </div>
+
+      <div class="popup-added-to-cart-body">
+        <div class="added-to-cart-icon"></div>
+        <p class="section-header">Товар добавлен в корзину!</p>
+      </div>
+      <div class="popup-added-to-cart-footer">
+        <a class="button popup-added-to-cart-button" href="#nowhere">Оформить заказ</a>
+        <button class="button popup-added-to-cart-button popup-added-to-cart-continue-button" type="button" aria-label="Продолжить покупки">Продолжить покупки</button>
+      </div>
+    </section>
+
+    <script>
+      var link = document.querySelector(".write-us-button");
+
+      var popup = document.querySelector(".write-us-section");
+      var close = popup.querySelector(".modal-close-button");
+
+      var form = popup.querySelector("form");
+      var name = popup.querySelector("[name=name]");
+      var email = popup.querySelector("[name=email]");
+      var message = popup.querySelector("[name=message]");
+
+      var isStorageSupport = true;
+      var storage = "";
+
+      try {
+        storage = localStorage.getItem("name");
+      } catch (err) {
+        isStorageSupport = false;
+      }
+
+      link.addEventListener("click", function (evt) {
+        evt.preventDefault();
+        popup.classList.add("modal-show");
+
+        if (storage) {
+          name.value = storage;
+          email.focus();
+        } else {
+          name.focus();
+        }
+      });
+
+      close.addEventListener("click", function (evt) {
+        evt.preventDefault();
+        popup.classList.remove("modal-show");
+        popup.classList.remove("modal-error");
+      });
+
+      form.addEventListener("submit", function (evt) {
+        evt.preventDefault();
+      });
+
+      form.addEventListener("submit", function (evt) {
+        if (!name.value || !email.value || !message.value) {
+          evt.preventDefault();
+          popup.classList.remove("modal-error");
+          popup.offsetWidth = popup.offsetWidth;
+          popup.classList.add("modal-error");
+          console.log("Нужно ввести имя, почтовый ящик и сообщение");
+        } else {
+          if (isStorageSupport) {
+            localStorage.setItem("name", name.value);
+          }
+        }
+      });
+
+      window.addEventListener("keydown", function (evt) {
+        if (evt.keyCode === 27) {
+          evt.preventDefault();
+          if (popup.classList.contains("modal-show")) {
+            popup.classList.remove("modal-show");
+            popup.classList.remove("modal-error");
+          }
+        }
+      });
+
+      var mapLink = document.querySelector(".interactive-map-img");
+
+      var mapPopup = document.querySelector(".popup-map-section");
+      var mapClose = mapPopup.querySelector(".modal-close-button");
+
+      mapLink.addEventListener("click", function (evt) {
+        evt.preventDefault();
+        mapPopup.classList.add("modal-show");
+      });
+
+      mapClose.addEventListener("click", function (evt) {
+        evt.preventDefault();
+        mapPopup.classList.remove("modal-show");
+      });
+
+      window.addEventListener("keydown", function (evt) {
+        if (evt.keyCode === 27) {
+          if (mapPopup.classList.contains("modal-show")) {
+            evt.preventDefault();
+            mapPopup.classList.remove("modal-show");
+          }
+        }
+      });
+
+      var buyLinks = document.querySelectorAll(".buy-button");
+
+      var buyPopup = document.querySelector(".popup-added-to-cart-section");
+      var buyContinue = buyPopup.querySelector(".popup-added-to-cart-continue-button");
+      var buyClose = buyPopup.querySelector(".modal-close-button");
+
+      for (i = 0; i < buyLinks.length; i++) {
+        buyLinks[i].addEventListener("click", function (evt) {
+          evt.preventDefault();
+          buyPopup.classList.add("modal-show");
+        });
+      }
+
+      buyContinue.addEventListener("click", function (evt) {
+        evt.preventDefault();
+        buyPopup.classList.remove("modal-show");
+      });
+
+      buyClose.addEventListener("click", function (evt) {
+        evt.preventDefault();
+        buyPopup.classList.remove("modal-show");
+      });
+
+      window.addEventListener("keydown", function (evt) {
+        if (evt.keyCode === 27) {
+          if (buyPopup.classList.contains("modal-show")) {
+            evt.preventDefault();
+            buyPopup.classList.remove("modal-show");
+          }
+        }
+      });
+    </script>
   </body>
 </html>
