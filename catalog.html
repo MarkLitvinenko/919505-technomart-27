@@ -26,7 +26,7 @@
           </form>
           <a class="header-menu-button bookmarks-button" href="#nowhere">Закладки: 0</a>
 
-          <a class="header-menu-button cart-button cart-button-not-empty" href="#nowhere">Корзина: 10</a>
+          <a class="header-menu-button cart-button" href="#nowhere">Корзина: 0</a>
 
           <a class="header-menu-button order-button" href="#nowhere">Оформить заказ</a>
         </div>
@@ -443,10 +443,17 @@
       var buyContinue = buyPopup.querySelector(".popup-added-to-cart-continue-button");
       var buyClose = buyPopup.querySelector(".modal-close-button");
 
+      var chosenProducts = document.querySelector(".cart-button");
+      var chosenProductsQuantity = 0;
+
       for (i = 0; i < buyLinks.length; i++) {
         buyLinks[i].addEventListener("click", function (evt) {
           evt.preventDefault();
           buyPopup.classList.add("modal-show");
+
+          chosenProductsQuantity++;
+          chosenProducts.classList.add("header-menu-button-not-empty");
+          chosenProducts.innerHTML = "Корзина: " + chosenProductsQuantity;
         });
       }
 
@@ -468,6 +475,20 @@
           }
         }
       });
+
+      var bookmarks = document.querySelector(".bookmarks-button");
+      var addToBookmarksButtons = document.querySelectorAll(".add-to-bookmarks-button");
+
+      var bookmarksQuantity = 0;
+
+      for (i = 0; i < addToBookmarksButtons.length; i++) {
+        addToBookmarksButtons[i].addEventListener("click", function (evt) {
+          evt.preventDefault();
+          bookmarksQuantity++;
+          bookmarks.classList.add("header-menu-button-not-empty");
+          bookmarks.innerHTML = "Закладки: " + bookmarksQuantity;
+        });
+      }
     </script>
   </body>
 </html>
