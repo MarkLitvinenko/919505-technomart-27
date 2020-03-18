@@ -65,12 +65,9 @@ img {
 }
 
 .header {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   background-color: #f3f7f9;
 
-  width: 100%;
+  padding-bottom: 60px;
 }
 
 .header-menu {
@@ -530,10 +527,6 @@ img {
 
 .user-lower-panel a:active {
   color: #c5c5c5;
-}
-
-.header-site-navigation {
-  margin-bottom: 60px;
 }
 
 .site-pages {
