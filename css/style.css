@@ -2,6 +2,8 @@ body {
   font-family: "Cuprum", "Arial", sans-serif;
   font-size: 13px;
   line-height: 24px;
+
+  min-width: 960px;
 }
 a {
   color: inherit;
@@ -140,6 +142,7 @@ img {
   left: 0;
 }
 
+.search-input,
 .search-input::placeholder {
   color: #ffffff;
 }
@@ -156,6 +159,10 @@ img {
 .search-input:active + .search-icon line,
 .search-input:active + .search-icon circle {
   stroke: #6a7180;
+}
+
+.search-input:focus {
+  color: #000000;
 }
 
 .search-input:focus + .search-icon line,
@@ -799,6 +806,8 @@ img {
 
   padding-top: 23px;
   padding-left: 24px;
+
+  background-color: #685c53;
 }
 
 .promo-slide p {
