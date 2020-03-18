@@ -2055,9 +2055,11 @@ img {
 }
 
 .interactive-map {
-  display: block;
+  display: flex;
 
-  margin-bottom: 32px;
+  margin-bottom: 40px;
+
+  background-color: #f5f3ed;
 }
 
 .write-us-button {
@@ -2407,6 +2409,8 @@ img {
   height: 446px;
 
   margin-left: -470px;
+
+  background-color: #eeeae3;
 
   box-shadow: 0 0 30px -10px #000000;
 }
