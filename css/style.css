@@ -1175,10 +1175,12 @@ img {
 
   margin: 0;
   padding: 0;
+
+  border-bottom: 1px solid #e5e5e5;
 }
 
-.filter-fieldset-border-bottom {
-  border-bottom: 1px solid #e5e5e5;
+.filter-fieldset:last-of-type {
+  border-bottom: none;
 }
 
 .filter-legend {
@@ -1583,7 +1585,6 @@ img {
   font-size: 14px;
   line-height: 18px;
 
-  text-align: center;
   text-transform: uppercase;
   text-decoration: none;
 
@@ -1595,10 +1596,14 @@ img {
 }
 
 .buy-button {
-  width: 135px;
+  width: 82px;
+
+  text-align: left;
 
   padding-top: 10px;
+  padding-right: 5px;
   padding-bottom: 10px;
+  padding-left: 47px;
 
   color: #ffffff;
 
@@ -1617,10 +1622,14 @@ img {
 }
 
 .add-to-bookmarks-button {
-  width: 129px;
+  width: 118px;
+
+  text-align: center;
 
   padding-top: 7px;
+  padding-right: 5px;
   padding-bottom: 7px;
+  padding-left: 5px;
 
   color: #32425c;
 
