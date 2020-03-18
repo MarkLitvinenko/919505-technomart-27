@@ -26,7 +26,7 @@
           </form>
           <a class="header-menu-button bookmarks-button" href="#nowhere">Закладки: 0</a>
 
-          <a class="header-menu-button cart-button cart-button-not-empty" href="#nowhere">Корзина: 10</a>
+          <a class="header-menu-button cart-button" href="#nowhere">Корзина: 0</a>
 
           <a class="header-menu-button order-button" href="#nowhere">Оформить заказ</a>
         </div>
@@ -49,17 +49,18 @@
             <a class="user-account-button logout-button" href="#nowhere"></a>
           </div>
 
-          <div class="user-lower-panel">
-            <a href="#nowhere">Мои заказы</a>
-            <svg width="6" height="6">
-              <circle cx="3" cy="3" r="2" stroke="#32425c" fill="#32425c" stroke-width="1"></circle>
-            </svg>
-            <a href="#nowhere">Личный кабинет</a>
-          </div>
+          <ul class="user-lower-panel">
+            <li class="user-lower-panel-href">
+              <a href="#nowhere">Мои заказы</a>
+            </li>
+            <li class="user-lower-panel-href">
+              <a href="#nowhere">Личный кабинет</a>
+            </li>
+          </ul>
         </div>
       </div>
 
-      <nav class="container header-site-navigation">
+      <nav class="container">
         <ul class="site-pages">
           <li class="site-page"><a href="index.html">Главная</a></li>
           <li class="site-page"><a href="#nowhere">Компания</a></li>
@@ -83,85 +84,96 @@
         </ul>
 
         <section class="catalog-menu">
-          <h2>Перфораторы</h2>
+          <div class="section-header-wrap catalog-menu-header">
+            <h2 class="section-header">Перфораторы</h2>
+          </div>
 
           <div class="main-catalog-menu">
             <form class="filter" method="get" action="https://echo.htmlacademy.ru">
-              <h3 class="visually-hidden">Форма фильтрации товаров</h3>
-              <p>Фильтр</p>
+              <div class="catalog-sub-header">
+                <h3>Фильтр:</h3>
+              </div>
 
-              <fieldset>
-                <legend>Цена:</legend>
-                <!--Здесь будет доделан двойной ползунок с ценами-->
-                <p>
+              <fieldset class="filter-fieldset">
+                <legend class="filter-legend filter-price-legend">Цена:</legend>
+
+                <div class="range-slider">
+                  <div class="range-slider-track">
+                    <button class="range-slider-pin range-slider-pin-min" type="button"></button>
+                    <div class="range-slider-track-inside"></div>
+                    <button class="range-slider-pin range-slider-pin-max" type="button"></button>
+                  </div>
+                </div>
+
+                <p class="range-slider-inputs">
                   <label>
-                    <input type="number" value="0" name="min" min="0" max="35000" step="100">
+                    <input class="range-slider-input" type="number" value="0" name="min" min="0" max="35000" step="100">
                     <span class="visually-hidden">Минимальная цена</span>
                   </label>
 
                   <span>—</span>
 
                   <label>
-                    <input type="number" value="0" name="max" min="0" max="35000" step="100">
+                    <input class="range-slider-input" type="number" value="30000" name="max" min="0" max="35000" step="100">
                     <span class="visually-hidden">Максимальная цена</span>
                   </label>
                 </p>
               </fieldset>
 
-              <fieldset class="filter-list checkbox-list">
-                <legend>Производители:</legend>
+              <fieldset class="filter-fieldset filter-list checkbox-list">
+                <legend class="filter-legend filter-list-legend">Производители:</legend>
                 <ul>
                   <li>
                     <label class="filter-item checkbox-item">
-                      <input type="checkbox" value="Bosch" name="companies-list">
-                      Bosch
+                      <input class="visually-hidden" type="checkbox" value="Bosch" name="companies-list" checked>
+                      <span class="checkbox-indicator">Bosch</span>
                     </label>
                   </li>
 
                   <li>
                     <label class="filter-item checkbox-item">
-                      <input type="checkbox" value="Interskol" name="companies-list">
-                      Интерскол
+                      <input class="visually-hidden" type="checkbox" value="Interskol" name="companies-list">
+                      <span class="checkbox-indicator">Интерскол</span>
                     </label>
                   </li>
 
                   <li>
                     <label class="filter-item checkbox-item">
-                      <input type="checkbox" value="Makita" name="companies-list">
-                      Makita
+                      <input class="visually-hidden" type="checkbox" value="Makita" name="companies-list" checked>
+                      <span class="checkbox-indicator">Makita</span>
                     </label>
                   </li>
 
                   <li>
                     <label class="filter-item checkbox-item">
-                      <input type="checkbox" value="Dewalt" name="companies-list">
-                      Dewalt
+                      <input class="visually-hidden" type="checkbox" value="Dewalt" name="companies-list">
+                      <span class="checkbox-indicator">Dewalt</span>
                     </label>
                   </li>
 
                   <li>
                     <label class="filter-item checkbox-item">
-                      <input type="checkbox" value="Hitachi" name="companies-list">
-                      Hitachi
+                      <input class="visually-hidden" type="checkbox" value="Hitachi" name="companies-list">
+                      <span class="checkbox-indicator">Hitachi</span>
                     </label>
                   </li>
                 </ul>
               </fieldset>
 
-              <fieldset class="filter-list radio-list">
-                <legend>Питание:</legend>
+              <fieldset class="filter-fieldset filter-list radio-list">
+                <legend class="filter-legend filter-list-legend">Питание:</legend>
                 <ul>
                   <li>
                     <label class="filter-item radio-item">
-                      <input type="radio" name="power-supply" value="Аккумуляторные">
-                      Аккумуляторные
+                      <input class="visually-hidden" type="radio" name="power-supply" value="Аккумуляторные" checked>
+                      <span class="checkbox-indicator">Аккумуляторные</span>
                     </label>
                   </li>
 
                   <li>
                     <label class="filter-item radio-item">
-                      <input type="radio" name="power-supply" value="Сетевые">
-                      Сетевые
+                      <input class="visually-hidden" type="radio" name="power-supply" value="Сетевые">
+                      <span class="checkbox-indicator">Сетевые</span>
                     </label>
                   </li>
                 </ul>
@@ -171,35 +183,35 @@
             </form>
 
             <div class="product-menu">
-              <div>
+              <div class="catalog-sub-header">
                 <h3>Сортировка:</h3>
 
-                <ul>
-                  <li>
+                <ul class="category-sorting-list">
+                  <li class="category-sorting-item category-sorting-item-active">
                     <a href="#nowhere">По цене</a>
                   </li>
 
-                  <li>
+                  <li class="category-sorting-item">
                     <a href="#nowhere">По типу</a>
                   </li>
 
-                  <li>
+                  <li class="category-sorting-item">
                     <a href="#nowhere">По функционалу</a>
                   </li>
                 </ul>
 
-                <ul>
+                <ul class="up-down-sorting-list">
                   <li>
-                    <a href="#nowhere">По возрастанию</a>
+                    <a class="arrow arrow-up arrow-active" href="#nowhere">По возрастанию</a>
                   </li>
 
                   <li>
-                    <a href="#nowhere">По убыванию</a>
+                    <a class="arrow arrow-down" href="#nowhere">По убыванию</a>
                   </li>
                 </ul>
               </div>
 
-              <ul class="card-list">
+              <ul class="card-list catalog-card-list">
                 <li class="card product-card">
                   <img class="product-img" src="img/perforator-1.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 3000">
                   <h3><a class="product-href" href="#nowhere">Перфоратор BOSCH BFG 3000</a></h3>
@@ -298,36 +310,28 @@
               </ul>
 
               <ul class="pagination-list">
-                <li><a>1</a></li>
-                <li><a href="#nowhere">2</a></li>
-                <li><a href="#nowhere">3</a></li>
-                <li><a href="#nowhere">Следующая</a></li>
+                <li class="pagination-item pagination-item-current"><a>1</a></li>
+                <li class="pagination-item"><a href="#nowhere">2</a></li>
+                <li class="pagination-item"><a href="#nowhere">3</a></li>
+                <li class="pagination-item pagination-item-next"><a href="#nowhere">Следующая</a></li>
               </ul>
             </div>
           </div>
         </section>
       </div>
 
-      <div class="presentation-text-block">
-        <section class="container">
-          <h2>Пара слов о перфораторах</h2>
+      <section class="presentation-text-block">
+        <div class="container">
+          <h2 class="section-header">Пара слов о перфораторах</h2>
           <p>
             Перфоратор — универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в кирпиче, бетоне и камне.
+          </p>
+          <p>
             Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции дрели, шуруповерта и отбойного молотка.
             В ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут совмещены отбойный молоток и ударная дрель.
           </p>
-        </section>
-      </div>
-
-      <div class="hidden">
-        <button type="button" aria-label="Закрыть"></button>
-        <p>Товар добавлен в корзину!<p>
-
-        <div>
-          <a href="#nowhere">Оформить заказ</a>
-          <a href="#nowhere">Продолжить покупки</a>
         </div>
-      </div>
+      </section>
     </main>
 
     <footer class="footer">
@@ -403,5 +407,21 @@
         </div>
       </div>
     </footer>
+
+    <section class="modal modal-window popup-added-to-cart-section">
+      <div class="modal-header">
+        <button class="modal-close-button" type="button" aria-label="Закрыть"></button>
+      </div>
+
+      <div class="popup-added-to-cart-body">
+        <p class="section-header">Товар добавлен в корзину!</p>
+      </div>
+      <div class="popup-added-to-cart-footer">
+        <a class="button popup-added-to-cart-button" href="#nowhere">Оформить заказ</a>
+        <button class="button popup-added-to-cart-button popup-added-to-cart-continue-button" type="button" aria-label="Продолжить покупки">Продолжить покупки</button>
+      </div>
+    </section>
+
+    <script src="js/script.js"></script>
   </body>
 </html>
