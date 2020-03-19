@@ -1047,7 +1047,7 @@ img {
 .catalog-sub-header {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
+  align-items: flex-start;
 
   font-family: "PT Sans", "Arial", sans-serif;
   font-size: 13px;
