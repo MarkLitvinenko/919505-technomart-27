@@ -2410,6 +2410,8 @@ img {
 
 .developer-info a:active {
   color: #ee3643;
+
+  text-decoration: none;
 }
 
 .popup-map-section {
